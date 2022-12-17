@@ -9,7 +9,9 @@ packages = [{include = "flask_async"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 Flask = {extras = ["async"], version = "^2.2.2"}
-gunicorn = "^20.1.0"
+gunicorn = {extras = ["gevent"], version = "^20.1.0"}
+quart = "^0.18.3"
+hypercorn = {extras = ["uvloop"], version = "^0.14.3"}
 
 
 [tool.poetry.group.dev.dependencies]
